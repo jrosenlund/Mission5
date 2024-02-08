@@ -1,22 +1,55 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #f00; /* Red shadow */
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-color: #f2f2f2; /* Light grey background */
+}
+
+/* LEGO-inspired colors */
+.btn,
+.btn-link.nav-link {
+    background-color: #f00; /* Red */
+    border-color: #ff0; /* Yellow */
+    color: #fff; /* White */
+}
+
+    .btn:hover,
+    .btn-link.nav-link:hover {
+        background-color: #ff0; /* Yellow on hover */
+        border-color: #f00; /* Red on hover */
+    }
+
+.form-control,
+.form-check-input {
+    border-color: #ff0; /* Yellow */
+}
+
+    .form-control:focus,
+    .form-check-input:focus {
+        border-color: #f00; /* Red on focus */
+    }
+
+main {
+    margin-bottom: 150px; /* Adjust this value as needed */
 }

@@ -3,4 +3,21 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+
+<p>Want some help from the LEGOPro? Use this calculator to find out how much your LEGO consultation will cost.</p>
+
+<img src="~/img/lego2.jpeg" width="600px"/>
+<br />
+<br />
+
+<!-- Calculator form -->
+<form>
+    <label>How many hours per week would you like?</label>
+    <input type="number" id="numHours" /><br />
+
+    <label>I need LEGOPro to provide LEGOs</label>
+    <input type="checkbox" id="needLEGO" /><br />
+
+    <br />
+    <button type="button" action="calculator()">Submit</button>
+</form>
