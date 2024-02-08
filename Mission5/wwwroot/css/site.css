@@ -53,3 +53,45 @@ body {
 main {
     margin-bottom: 150px; /* Adjust this value as needed */
 }
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px; /* Adjust the max-width as needed */
+    margin: 20px auto; /* Center the table */
+}
+
+/* Table header styles */
+th {
+    background-color: #f2f2f2; /* Light grey background */
+    color: #333; /* Dark grey text color */
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table row styles */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Even row background color */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff; /* Odd row background color */
+}
+
+/* Table cell styles */
+td {
+    border: 1px solid #ddd; /* Light grey border */
+    padding: 8px;
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #e6f7ff; /* Light blue background on hover */
+}
+
+/* Example: Red border for specific cells */
+td.error {
+    border: 2px solid #ff0000; /* Red border for cells with the 'error' class */
+}
