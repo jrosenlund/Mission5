@@ -3,10 +3,9 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-
 <p>Want some help from the LEGOPro? Use this calculator to find out how much your LEGO consultation will cost.</p>
 
-<img src="~/img/lego2.jpeg" width="600px"/>
+<img src="~/img/lego2.jpeg" width="600px" />
 <br />
 <br />
 
@@ -19,5 +18,52 @@
     <input type="checkbox" id="needLEGO" /><br />
 
     <br />
-    <button type="button" action="calculator()">Submit</button>
+    <button type="button" id="btnCalculate">Calculate</button>
 </form>
+
+
+<script src="~/lib/jquery/jquery.min.js"></script>
+<script>
+    // Calculator functionality
+    $("#btnCalculate").click(function () {
+        let cost = 0;
+        let numHours = $("#numHours").val();
+        let needLEGO = $("#needLEGO").is(":checked");
+
+        // Calculate cost based on hours
+        if (numHours < 1) {
+            $("#numHours").val("");
+            alert("Please enter a number between 1 and 10");
+        }
+        else if (numHours > 10) {
+            $("#numHours").val("");
+            alert("That's too long! Please enter a number between 1 and 10")
+        }
+        else {
+            if (numHours < 3) {
+                cost = numHours * 30
+            }
+            else if (numHours < 7) {
+                cost = numHours * 27
+            }
+            else {
+                cost = numHours * 25
+            }
+        }
+        
+        // Add possible cost of LEGOs
+        if (needLEGO == true) {
+            if (numHours < 3) {
+                cost = cost + 20
+            }
+            else if (numHours < 7) {
+                cost = cost + 30
+            }
+            else {
+                cost = cost + 40
+            }
+        }
+
+        alert("Cost: $" + cost)
+    });
+</script>
