@@ -21,6 +21,7 @@
     <button type="button" id="btnCalculate">Calculate</button>
 </form>
 
+<!-- For some reason the css stylesheet wasn't updating the table, so I just put it here :) -->
 <style>
     /* Table styles */
     table {
@@ -94,49 +95,4 @@
 
 
 <script src="~/lib/jquery/jquery.min.js"></script>
-<script>
-    // Calculator functionality
-    $("#btnCalculate").click(function () {
-        let cost = 0;
-        let numHours = $("#numHours").val();
-        let needLEGO = $("#needLEGO").is(":checked");
-
-        // Calculate cost based on hours
-        if (numHours < 1) {
-            $("#numHours").val("");
-            $("#quote").html("");
-            alert("Please enter a number between 1 and 10");
-        }
-        else if (numHours > 10) {
-            $("#numHours").val("");
-            $("#quote").html("");
-            alert("That's too long! Please enter a number between 1 and 10")
-        }
-        else {
-            if (numHours < 4) {
-                cost = numHours * 30
-            }
-            else if (numHours < 7) {
-                cost = numHours * 27
-            }
-            else {
-                cost = numHours * 25
-            }
-
-            // Add possible cost of LEGOs
-            if (needLEGO == true) {
-                if (numHours < 3) {
-                    cost = cost + 20
-                }
-                else if (numHours < 7) {
-                    cost = cost + 30
-                }
-                else {
-                    cost = cost + 40
-                }
-            }
-
-            $("#quote").html("$" + cost);
-        }
-    });
-</script>
+<script src="~/js/site.js"></script>
